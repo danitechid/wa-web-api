@@ -1,6 +1,6 @@
 {
   "name": "@danitech/wa-web-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "WhatsApp Web API - TypeScript/JavaScript. ditenagai oleh library: Baileys.",
   "main": "index.js",
   "type": "commonjs",
