@@ -4,12 +4,12 @@ WhatsApp Web API ini ditenagai oleh library: Baileys
 ## Instalasi
 ### Menggunakan Npm
 ```bash
-npm i @danitech/whatsapp-api
+npm i @danitech/wa-web-api
 ```
 
 ### Atau Menggunakan Yarn
 ```bash
-yarn add @danitech/whatsapp-api
+yarn add @danitech/wa-web-api
 ```
 
 ## Contoh Kode
