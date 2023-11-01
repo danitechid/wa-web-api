@@ -1,0 +1,4 @@
+{
+  "watch": ["lib/index.js", "utils/functionsUtils.js"],
+  "ext": "js"
+}

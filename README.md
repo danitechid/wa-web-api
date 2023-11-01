@@ -25,40 +25,24 @@ const startServer = (config, client) => {
   return server.start(config, client);
 };
 
-const watchAndReloadFile = (filePath) => {
-  const currentFile = require.resolve(filePath);
-  const filename = currentFile.substring(currentFile.lastIndexOf('/') + 1);
-
-  fs.watchFile(currentFile, () => {
-    fs.unwatchFile(currentFile);
-    console.info(chalk.cyan(`${filename} file has been updated.`));
-    delete require.cache[currentFile];
-    require(currentFile);
-    watchAndReloadFile(filePath);
-  });
-};
-
 startServer(config, client);
-
-watchAndReloadFile('./config/settings.js');
-watchAndReloadFile('./includes/client.js');
 ```
 
 ### ./config/settings.js
 ```javascript
 module.exports = {
-  session_folder_name: 'session',
   pairing_mode: true,
+  session_folder_name: 'session',
   browser: ["Chrome (Windows)", "latest"],
-  prefix: '.',
   public_mode: true,
+  prefix: '.',
   bot: {
-    name: 'Dani BOT',
-    profile_status: 'Bot aktif hingga kiamat or 24/7'
+    name: 'Bot Name',
+    profile_status: 'Bot Status'
   },
   owner: {
-    name: ["Dani Techno."],
-    number: ["6288296339947", "6289512545999"]
+    name: ["Owner Name"],
+    number: ["628xxx"]
   }
 };
 ```
@@ -124,6 +108,33 @@ module.exports = async ({
     console.error(error);
   };
 };
+```
+
+### ./package.json
+```json
+{
+  "name": "whatsapp-bot",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@danitech/wa-web-api": "latest",
+    "fs": "latest",
+    "chalk": "^4.1.2"
+  }
+}
+```
+
+### ./nodemon.json
+```json
+{
+  "watch": ["config/settings.js", "includes/client.js"],
+  "ext": "js"
+}
 ```
 
 ### Contoh kode/skrip bot WhatsApp lengkap
