@@ -125,6 +125,9 @@ module.exports = async ({
     "@danitech/wa-web-api": "latest",
     "fs": "latest",
     "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "~3.0.1"
   }
 }
 ```
