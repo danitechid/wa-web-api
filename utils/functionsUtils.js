@@ -6,19 +6,7 @@
 
 /* Thanks to
  * Dani Techno. - FullStack Engineer (Creator / Developer)
- * daniapi.biz.id (API provider)
- * api.caliph.biz.id (API provider)
- * @danitech/scraper (Scraper provider)
  * @whiskeysockets/baileys (Library "Baileys" provider)
- * @adiwajshing/keyed-db
- * @hapi/boom
- * pino
- * qrcode-terminal
- * chalk
- * mongoose
- * node-cron
- * nodemon
- * other
 */
 
 const {
