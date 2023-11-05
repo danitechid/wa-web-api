@@ -13,6 +13,36 @@ yarn add @danitech/wa-web-api
 ```
 
 ## Contoh Kode
+### ./package.json
+```json
+{
+  "name": "whatsapp-bot",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@danitech/wa-web-api": "latest",
+    "fs": "latest",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "~3.0.1"
+  }
+}
+```
+
+### ./nodemon.json
+```json
+{
+  "watch": ["config/settings.js", "includes/client.js"],
+  "ext": "js"
+}
+```
+
 ### ./index.js
 ```javascript
 const server = require('@danitech/wa-web-api');
@@ -35,15 +65,7 @@ module.exports = {
   session_folder_name: 'session',
   browser: ["Chrome (Windows)", "latest"],
   public_mode: true,
-  prefix: '.',
-  bot: {
-    name: 'Bot Name',
-    profile_status: 'Bot Status'
-  },
-  owner: {
-    name: ["Owner Name"],
-    number: ["628xxx"]
-  }
+  prefix: '.'
 };
 ```
 
@@ -108,36 +130,6 @@ module.exports = async ({
     console.error(error);
   };
 };
-```
-
-### ./package.json
-```json
-{
-  "name": "whatsapp-bot",
-  "version": "0.0.0",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  },
-  "dependencies": {
-    "@danitech/wa-web-api": "latest",
-    "fs": "latest",
-    "chalk": "^4.1.2"
-  },
-  "devDependencies": {
-    "nodemon": "~3.0.1"
-  }
-}
-```
-
-### ./nodemon.json
-```json
-{
-  "watch": ["config/settings.js", "includes/client.js"],
-  "ext": "js"
-}
 ```
 
 ### Contoh kode/skrip bot WhatsApp lengkap
