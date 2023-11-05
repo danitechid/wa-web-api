@@ -65,7 +65,14 @@ module.exports = {
   session_folder_name: 'session',
   browser: ["Chrome (Windows)", "latest"],
   public_mode: true,
-  prefix: '.'
+  prefix: '.',
+  bot: {
+    name: 'Bot Name'
+  },
+  owner: {
+    name: 'Owner Name',
+    number: '628xxx'
+  }
 };
 ```
 
