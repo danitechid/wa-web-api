@@ -38,7 +38,7 @@ yarn add @danitech/wa-web-api
 ### ./nodemon.json
 ```json
 {
-  "watch": ["config/settings.js", "includes/client.js"],
+  "ignore": ["index.js"],
   "ext": "js"
 }
 ```

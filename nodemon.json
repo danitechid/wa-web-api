@@ -1,4 +1,4 @@
 {
-  "watch": ["lib/index.js", "utils/functionsUtils.js"],
+  "ignore": ["lib/index.js"],
   "ext": "js"
 }
