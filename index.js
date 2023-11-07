@@ -9,8 +9,16 @@
  * @whiskeysockets/baileys (Library "Baileys" provider)
 */
 
-const startServer = require('./lib');
+const wwa = require('./lib/wa-web-api.js');
+
+const {
+  startServer
+} = wwa;
 
 module.exports = {
-  start: startServer
+  default: startServer,
+  start: startServer,
+  startServer: startServer,
+  makeWASocket: startServer,
+  connectToWhatsApp: startServer
 };

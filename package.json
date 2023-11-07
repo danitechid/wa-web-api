@@ -1,12 +1,11 @@
 {
   "name": "@danitech/wa-web-api",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "WhatsApp Web API - TypeScript/JavaScript. ditenagai oleh library: Baileys.",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^6.5.0",
@@ -24,9 +23,6 @@
     "file-type": "^16.5.3",
     "axios": "0.24.0",
     "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "nodemon": "~3.0.1"
   },
   "author": "Dani Ramdani",
   "license": "ISC",
