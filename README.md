@@ -25,9 +25,7 @@ yarn add @danitech/wa-web-api
     "dev": "nodemon index.js"
   },
   "dependencies": {
-    "@danitech/wa-web-api": "latest",
-    "fs": "latest",
-    "chalk": "^4.1.2"
+    "@danitech/wa-web-api": "latest"
   },
   "devDependencies": {
     "nodemon": "~3.0.1"
@@ -63,7 +61,7 @@ startServer(config, client);
 module.exports = {
   pairing_mode: true,
   session_folder_name: 'session',
-  browser: ["Chrome (Windows)", "latest"],
+  browser: ["Chrome (Linux)"],
   public_mode: true,
   prefix: '.',
   bot: {
